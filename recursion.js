@@ -1,8 +1,8 @@
-function recursion(obj) {
+module.exports = function recursion(obj) {
   if(recursion.arr === undefined) recursion.arr = [];
   let stage = 0;
   let curVal = obj.value;
-  let tempTree = Object.assign({},tree);
+  let tempTree = Object.assign({},obj);
   while(curVal != tempTree.value) {
     if(curVal > tempTree.value) tempTree = tempTree.right;
     else tempTree = tempTree.left;
